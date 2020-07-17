@@ -15,7 +15,7 @@ export default function () {
                     component={(props: any) => {
                         if (item.layout)
                             return (
-                                <Layout {...props}>
+                                <Layout {...props} active={item.path}>
                                     <item.page {...props} />
                                 </Layout>
                             );

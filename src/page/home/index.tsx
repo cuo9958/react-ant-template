@@ -1,7 +1,8 @@
 import React from 'react';
 import { Button } from 'antd';
 
-function App() {
+function App(prop: any) {
+    console.log(prop)
     return (
         <div className="App">
             <header className="App-header">

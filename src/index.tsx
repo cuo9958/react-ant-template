@@ -1,11 +1,18 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.less";
-import App from "./App";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'mobx-react';
+import { HashRouter } from 'react-router-dom';
+import stores from './models';
+import Routes from './routes';
 
-ReactDOM.render(
-    <React.StrictMode>
-        <App />
-    </React.StrictMode>,
-    document.getElementById("root")
-);
+import './index.less';
+
+function Render() {
+    return (
+        <Provider {...stores}>
+            <HashRouter>{Routes()}</HashRouter>
+        </Provider>
+    );
+}
+
+ReactDOM.render(<Render />, document.getElementById('root'));

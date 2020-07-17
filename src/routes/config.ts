@@ -1,5 +1,6 @@
 import Home from '../page/home';
 import List from '../page/list';
+import Table from '../page/table';
 
 export default [
     {
@@ -15,6 +16,14 @@ export default [
         title: '列表',
         path: '/list',
         page: List,
+        exact: true,
+        layout: true,
+    },
+    {
+        name: 'table',
+        title: '表格',
+        path: '/table',
+        page: Table,
         exact: true,
         layout: true,
     },

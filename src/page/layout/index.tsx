@@ -1,9 +1,9 @@
 import React from 'react';
-import { Layout, Menu } from 'antd';
+import { Layout, Menu, Avatar } from 'antd';
 import './index.less';
 import routes from '../../routes/config';
 
-const { Header, Content, Sider } = Layout;
+const { Content, Sider } = Layout;
 
 interface IProps {
     location: any;
@@ -23,7 +23,9 @@ export default class extends React.Component<IProps> {
                     </Menu>
                 </Sider>
                 <Layout className="container">
-                    {/* <Header className="header">标题</Header> */}
+                    <div className="header">
+                        <Avatar style={{ color: '#f56a00', backgroundColor: '#fde3cf' }}>管</Avatar>
+                    </div>
                     <Content className="contents">{this.props.children}</Content>
                 </Layout>
             </Layout>

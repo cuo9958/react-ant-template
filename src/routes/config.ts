@@ -1,7 +1,7 @@
 import Home from '../page/home';
 import List from '../page/list';
 import Table from '../page/table';
-import Logout from '../page/logout';
+import Login from '../page/login';
 
 interface ICFG {
     name: string;
@@ -39,10 +39,10 @@ const list: ICFG[] = [
         layout: true,
     },
     {
-        name: 'logout',
+        name: 'login',
         title: '登录',
-        path: '/logout',
-        page: Logout,
+        path: '/login',
+        page: Login,
         exact: true,
         layout: false,
     },

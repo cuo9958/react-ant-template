@@ -2,15 +2,34 @@
     background: #ccc;
     .header {
         background: #fff;
-        padding: 10px 10px;
+        padding: 7px 10px;
         text-align: right;
+        .avatar {
+            width: 24px;
+            height: 24px;
+            color: #f56a00;
+            background-color: #fde3cf;
+
+            span {
+                line-height: 25px;
+                font-size: 12px;
+            }
+        }
+        .logout {
+            margin-left: 10px;
+            font-size: 12px;
+            height: 20px;
+            padding: 0 5px;
+        }
     }
-}
-.container {
-    .header {
-        background: #fefefe;
-    }
-    .contents {
-        padding: 10px;
+    .container {
+        min-height: 100vh;
+
+        .header {
+            background: #fefefe;
+        }
+        .contents {
+            padding: 10px;
+        }
     }
 }

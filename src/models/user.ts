@@ -7,5 +7,8 @@ class User {
         this.token = db.token;
         localStorage.setItem('ys_token', db.token);
     };
+    getToken() {
+        return '';
+    }
 }
 export default new User();

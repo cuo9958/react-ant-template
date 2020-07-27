@@ -54,5 +54,8 @@ export default class extends React.Component<any, IState> {
         if (!this.state.username) {
             return message.error('请填写用户名');
         }
+        //request
+        this.props.login();
+        this.props.history.push('/');
     };
 }

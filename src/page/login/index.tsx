@@ -3,6 +3,7 @@ import { Button, Input, Divider, message } from 'antd';
 import './index.less';
 import { LoginOutlined, UserOutlined, AlertOutlined } from '@ant-design/icons';
 import { inject } from 'mobx-react';
+import { UserApi } from '@/api';
 
 interface IState {
     username: string;
@@ -49,13 +50,17 @@ export default class extends React.Component<any, IState> {
     setPassword = (e: any) => {
         this.setState({ password: e.target.value });
     };
-    login = () => {
+    login = async () => {
         console.log(this.state, this.props);
         if (!this.state.username) {
             return message.error('请填写用户名');
         }
-        //request
-        this.props.login();
-        this.props.history.push('/');
+        try {
+            const data = await UserApi.login({});
+            this.props.login(data);
+            this.props.history.push('/');
+        } catch (error) {
+            message.error(error.message);
+        }
     };
 }
